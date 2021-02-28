@@ -8,6 +8,6 @@
     <string name="cancel">يلغي</string>
     <string name="ok">موافق</string>
     <string name="error">خطأ</string>
-    <string name="overview">Overview</string>
-    <string name="known_for">Known For</string>
+    <string name="overview">ملخص</string>
+    <string name="known_for">معروف عن</string>
 </resources>
