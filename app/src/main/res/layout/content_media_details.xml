@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:scrollbars="none"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MediaDetails.MediaDetailsActivity"
+    tools:showIn="@layout/activity_details">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Card for Movie overview -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_movie_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/black"
+            android:elevation="@dimen/card_elevation"
+            app:cardCornerRadius="@dimen/card_album_radius">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/play_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="@string/watch"
+                    android:textSize="@dimen/movie_title_size" />
+
+
+                <TextView
+                    android:id="@+id/tv_overview_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/play_button"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="12"
+                    android:text="@string/overview"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/movie_title_size"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_movie_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_overview_title"
+                    android:layout_marginTop="3dp"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--Billed cast cardview -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_production_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/black"
+            android:layout_marginTop="@dimen/card_margin"
+            android:elevation="@dimen/card_elevation"
+            app:cardCornerRadius="@dimen/card_album_radius">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_cast_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="12"
+                    android:text="Casr"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/movie_title_size"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_cast_title">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_cast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                    <androidx.core.widget.ContentLoadingProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Movie details cardview -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/black"
+            android:layout_marginTop="@dimen/card_margin"
+            android:elevation="@dimen/card_elevation"
+            app:cardCornerRadius="@dimen/card_album_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="details"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/movie_title_size"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_homepage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="home page"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_homepage_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_tagline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="tag line"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_tagline_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_runtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="runtime"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_runtime_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

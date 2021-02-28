@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StarzPlay</string>
+    <string name="search_hint">البحث عن المحتوى...</string>
+    <string name="watch"> المشاهدة</string>
+    <string name="alert">انذار</string>
+    <string name="retry">أعد المحاولة</string>
+    <string name="cancel">يلغي</string>
+    <string name="ok">موافق</string>
+    <string name="error">خطأ</string>
+    <string name="overview">Overview</string>
+    <string name="known_for">Known For</string>
+</resources>
